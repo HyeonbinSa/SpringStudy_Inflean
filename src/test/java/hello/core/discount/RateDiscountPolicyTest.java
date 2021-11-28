@@ -21,4 +21,11 @@ class RateDiscountPolicyTest {
         Assertions.assertThat(discount).isEqualTo(1000);
     }
 
+    @Test
+    @DisplayName("BASIC은 0원 할인이 적용되어야 한다.")
+    void vip_no() {
+        Member member = new Member(1L, "memberB", Grade.BASIC);
+        int discount = discountPolicy.discount(member, 10000);
+        Assertions.assertThat(discount).isEqualTo(0);
+    }
 }
