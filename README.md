@@ -13,3 +13,6 @@
    - Test
      - VIP일 경우 10% 할인이 정상적으로 되는지 확인
      - BASIC일 경우 0원 할인이 적용되는지 확인
+5. AppConfig를 통한 관심사 분리
+     - MembrerServiceImpl, OrderServiceImpl은 해당 Interface만 의존하도록 수정
+     - AppConfig에서 해당 객체 생성
