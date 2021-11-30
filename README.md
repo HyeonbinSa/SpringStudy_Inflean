@@ -16,3 +16,9 @@
 5. AppConfig를 통한 관심사 분리
      - MembrerServiceImpl, OrderServiceImpl은 해당 Interface만 의존하도록 수정
      - AppConfig에서 해당 객체 생성
+6. @Configuration 어노테이션을 이용하여 Spring으로 전환
+     - 사용되는 메서드를 @Bean 어노테이션을 통해 등록
+       - Bean  이름은 메서드 이름을 사용.
+       - 직접 부여할 수 있음.(@Bean(name="makeBean"))
+     - 사용 시에는 ApplicationContext라는 Spring Container를 통해 사용
+   
